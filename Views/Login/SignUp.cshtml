@@ -1,0 +1,113 @@
+﻿@{
+    ViewData["Title"] = "SignUP";
+}
+
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="~/css/SignUp.css" asp-append-version="true" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<heder>
+    <div>
+        <h1>Register for New User</h1>
+    </div>
+</heder>
+<body>
+    <main>
+        <div>
+            <div class="names" style="display:flex">
+                <label>First Name: </label>
+                <input id="FirstName" />
+                <label>Middle Name: </label>
+                <input id="MiddleName" />
+                <label>Last Name: </label>
+                <input id="LastName" />
+            </div>
+            <div class="properties">
+            <div class="form-group">
+                <label>Email</label>
+                <label id="ErrorEmailDisplay"></label>
+                <input id="Email" />
+            </div>
+            <div class="form-group">
+                <label>Mobile No</label>
+                <label id="ErrorMobileDisplay"></label>
+                <input id="Mobile" />
+            </div>
+            <div class="form-group">
+                <label>City</label>
+                <input id="City" />
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input id="Password" />
+            </div>
+            <div class="form-group">
+                <label>Profile Image</label>
+                <input type="file" id="ProfileImage" />
+            </div>
+            </div>
+        </div>
+        <div class="submitButton">
+            <button  type="submit" onclick="SignUpNewUser()">Register</button>
+        </div>
+        
+    </main>
+
+
+</body>
+<script type="text/javascript">
+    function SignUpNewUser() {
+        console.log($("#FirstName").val());
+        console.log($("#LastName").val());
+        console.log($("#Email").val());
+        console.log($("#Mobile").val());
+        console.log($("#Password").val());
+        console.log($("#ProfileImage").val());
+    }
+
+    $(document).ready(function () {
+        $("#Email").change(function () {
+            validateEmail();
+        });
+
+        $("#Mobile").change(function () {
+            validateMobile();
+        });
+
+        function validateEmail() {
+            var email = $("#Email").val();
+            var emailPattern = /^[a-zA-Z0-9._-]+[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+            if (!emailPattern.test(email) && email != null) {
+                $("#ErrorEmailDisplay").text("Please enter a valid email address.");
+                // $("#Email").val("");
+                $("#Email").focus();
+            }
+            else {
+                $("#ErrorEmailDisplay").text("");
+            }
+        }
+
+        function validateMobile() {
+            var mobile = $("#Mobile").val();
+            var mobilePattern = /^\d{10}$/; // Assuming 10-digit mobile numbers
+
+            if (!mobilePattern.test(mobile) && mobile != null) {
+                $("#ErrorMobileDisplay").text("Please Enter Valid Mobile Number");
+                //$("#Mobile").val("");
+                $("#Mobile").focus();
+            }
+            else {
+                $("#ErrorMobileDisplay").text("");
+            }
+        }
+
+
+    });
+</script>
+
+</html>

@@ -1,0 +1,43 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/MainNav.css" asp-append-version="true" />
+</head>
+<body>
+
+    <!-- Horizontal Navbar -->
+    <header>
+    <div class="horizontal-navbar">
+        <a href="/Home/Index">Home</a>
+        <a href="/Home/About">About</a>
+        <a href="#services">Services</a>
+        <a href="/Home/Contact">Contact</a>
+        <a class="login-tab" href="/Login/SignUp">Register</a>
+        <a class="login-tab" href="/Login/Login">Login</a>
+    </div>
+    </header>
+    <!-- Vertical Navbar -->
+
+    <div class="vertical-navbar">
+        <a href="#section1">Section 1</a>
+        <a href="#section2">Section 2</a>
+        <a href="#section3">Section 3</a>
+        <a href="#section4">Section 4</a>
+    </div>
+     <!-- Page Content -->
+        <div class="container-main">
+            <main>
+            @RenderBody()
+            </main>
+        </div>
+
+
+    
+    <footer class="Footer-Nav">
+        <div>
+            &copy; 2023 - HOTELBHISEFAMILY - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿
+main {
+    text-align:center;
+    margin-top: 100px;
+}
+main div{
+    margin-top:10px;
+}
+
+.Login-Page {
+    display: flex;
+    flex-direction: column;
+   text-align:center;
+}
+
+    .Login-Page div {
+        margin-top: 10px;
+    }
+label{
+    display:block;
+}

@@ -1,0 +1,48 @@
+﻿body {
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+    margin-top:10px;
+    margin-bottom:auto;
+} 
+label{
+    width:auto;
+}
+input {
+    width: auto;
+}
+h1 {
+    text-align: center;
+}
+.button{
+    
+   widows:100px;
+}
+#ErrorEmailDisplay,#ErrorMobileDisplay {
+    color: red;
+}
+.submitButton{
+    margin-top:30px;
+    text-align:center;
+}
+.properties {
+    text-align:center;
+    align-items:center;
+    display: flex;
+    flex-direction: column;
+}
+.properties label{
+   display:block;
+}
+.properties input{
+    
+    width:200px;
+    display:block;
+}
+.names {
+    margin-left:200px;
+    display: flex;
+    flex-wrap: wrap;
+}
