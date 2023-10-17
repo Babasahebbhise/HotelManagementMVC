@@ -30,6 +30,7 @@
 }
 .container-main {
     margin-left: 200px;
+    overflow-y: scroll;
     background-color: burlywood;
     height: 100vh;
 }

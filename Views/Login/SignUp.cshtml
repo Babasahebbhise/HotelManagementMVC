@@ -67,6 +67,14 @@
         console.log($("#Mobile").val());
         console.log($("#Password").val());
         console.log($("#ProfileImage").val());
+        var EmailError = $("#ErrorEmailDisplay").val();
+        var MobileError = $("#ErrorEmailDisplay").val();
+        if (EmailError =="" && MobileError=="")
+        {
+            console.log(EmailError);
+            console.log(MobileError);
+            console.log("Valid Entry0");
+        }
     }
 
     $(document).ready(function () {
